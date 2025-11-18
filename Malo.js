@@ -5,7 +5,7 @@ const dayButtons = document.querySelectorAll("[data-daytype]");
 const normalBlocks = document.querySelectorAll(".apres-ecole-normal");
 const longueBlocks = document.querySelectorAll(".apres-ecole-longue");
 
-// Gestion des citations (avec fallback embarqué pour l'affichage en ligne)
+// Gestion des citations (chargées via citations.js, fallback local au cas où)
 const fallbackCitations = [
     { text: "Un héros se construit en gagnant un peu d’XP chaque jour, pas en farmant une seule fois.", source: "Coach du Sanctuaire" },
     { text: "Les légendes ne spamment pas les sorts : elles gèrent leur mana avec discipline.", source: "Grimoire du Paladin" },
@@ -18,10 +18,9 @@ const fallbackCitations = [
     { text: "Chaque habitude est un point de compétence. Investis dans celles qui te rendent plus fort.", source: "Arbre des Talents" },
     { text: "La progression lente mais régulière dépasse toutes les strats éclairs.", source: "Manuel du Tank" }
 ];
-const citations =
-    Array.isArray(window.CITATIONS) && window.CITATIONS.length
-        ? window.CITATIONS
-        : fallbackCitations;
+const citations = Array.isArray(window.CITATIONS) && window.CITATIONS.length
+    ? window.CITATIONS
+    : fallbackCitations;
 const citationText = document.getElementById("citation-text");
 const citationSource = document.getElementById("citation-source");
 const btnNewCitation = document.getElementById("btn-new-citation");
