@@ -303,3 +303,19 @@ html, body {
         grid-column: 1 / -1;
     }
 }
+/* Style légendaire doré pour la quête spéciale */
+.card-quest {
+    background: linear-gradient(135deg, #3a2b00, #8c6f1d 40%, #d4af37 100%); /* fond or brillant */
+    border-left: 4px solid #d4af37; /* bord or pur */
+    box-shadow: 0 0 16px #d4af37aa, 0 0 6px #8c6f1daa; /* lueur or */
+}
+
+.card-quest h2 {
+    color: #ffd700; /* or lumineux */
+    text-shadow: 0 0 6px #d4af37; /* effet brillant */
+}
+
+.card-quest .task-list label span,
+.card-quest .task-list label {
+    color: #ffe9a3; /* texte or doux, lisible */
+}
