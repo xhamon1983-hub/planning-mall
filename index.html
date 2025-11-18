@@ -2,13 +2,28 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Planning – Player Malo</title>
+    <title>Planning Player Malo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Police gamer -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Couleur de thème pour mobile -->
+    <meta name="theme-color" content="#020617">
 
+    <!-- Mode app iOS (plein écran) -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Player Malo">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Icône iPhone -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/media/player.png">
+
+    <!-- Manifest PWA -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Tes fichiers CSS / JS -->
     <link rel="stylesheet" href="script.css">
+    <script defer src="citations.js"></script>
+    <script defer src="Malo.js"></script>
+    
 </head>
 <body>
     <div class="bg-overlay"></div>
@@ -19,6 +34,18 @@
     </header>
 
     <main class="container">
+
+        <!-- 0 — MOTIVATION DU JOUR -->
+        <section class="card card-quote">
+            <div class="quote-header">
+                <h2>💬 Citation du jour</h2>
+                <button class="btn btn-secondary btn-quote" id="btn-new-citation">Nouvelle citation</button>
+            </div>
+            <p id="citation-text" class="quote-text">
+                Chargement de la motivation du jour...
+            </p>
+            <p id="citation-source" class="quote-source"></p>
+        </section>
 
         <!-- 1 — JOURS DE LA SEMAINE -->
         <section class="day-switch">
@@ -69,6 +96,24 @@
                     </label>
                 </li>
 
+            </ul>
+        </section>
+
+        <!-- 6 bis — QUÊTE SPÉCIALE / LÉGENDAIRE -->
+        <section class="card card-quest">
+            <h2>💎 Quête spéciale / légendaire</h2>
+
+            <p class="hint">
+                Quête bonus que le clan te confie pour aujourd’hui. Papa ou maman peuvent changer cette ligne directement dans le planning.
+            </p>
+
+            <ul class="task-list">
+                <li>
+                    <label>
+                        <input type="checkbox" data-task-id="quete-speciale">
+                        <span id="special-quest-text">Exemple : vider le lave-vaisselle, sortir le compost ou le recyclage, passer le balai, aider à une tâche spéciale…</span>
+                    </label>
+                </li>
             </ul>
         </section>
 
@@ -299,6 +344,5 @@
         <p>Sanctuaire version maison – pour un héros qui progresse IRL & in-game 💪</p>
     </footer>
 
-    <script src="Malo.js"></script>
 </body>
 </html>
