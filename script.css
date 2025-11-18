@@ -319,3 +319,26 @@ html, body {
 .card-quest .task-list label {
     color: #ffe9a3; /* texte or doux, lisible */
 }
+/* Style rouge sang pour la carte Citation du jour */
+.card-quote {
+    background: linear-gradient(135deg, #2a0000, #4a0000 40%, #6b0000 100%);
+    border-left: 4px solid #c40000;
+    box-shadow: 0 0 14px #8b0000aa, 0 0 6px #ff000066;
+}
+
+/* Titre rouge lumineux */
+.card-quote h2 {
+    color: #ff4d4d;
+    text-shadow: 0 0 6px #c40000;
+}
+
+/* Texte de la citation */
+.card-quote .quote-text {
+    color: #ffb3b3;
+}
+
+/* Auteur de la citation */
+.card-quote .quote-source {
+    color: #ff8080;
+    font-style: italic;
+}
