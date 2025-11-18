@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Planning – Player Malo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Police gamer -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="script.css">
+</head>
+<body>
+    <div class="bg-overlay"></div>
+
+    <header class="header">
+        <h1>Planning</h1>
+        <p>Routine du Sanctuaire – version <span class="gamer">Player Malo</span></p>
+    </header>
+
+    <main class="container">
+
+        <!-- 1 — JOURS DE LA SEMAINE -->
+        <section class="day-switch">
+            <button class="btn btn-active" data-daytype="normal">Lun / Mer / Ven</button>
+            <button class="btn" data-daytype="longue">Mar / Jeu (run longue)</button>
+        </section>
+
+        <!-- 2 — MATIN -->
+        <section class="card card-matin">
+            <h2>🌅 Matin (tous les jours)</h2>
+            <p class="hint">
+                On démarre la journée comme avant un donjon : on prépare le héros, pas juste le joueur.
+            </p>
+            <ul class="task-list">
+
+                <li>
+                    <label>
+                        <input type="checkbox" data-task-id="matin-reveil">
+                        7h00 – Réveil du héros + verre d’eau (potion de soin)
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <input type="checkbox" data-task-id="matin-petitdej">
+                        7h05 – Petit déjeuner : on remplit la barre d’énergie
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <input type="checkbox" data-task-id="matin-hygiene">
+                        7h45 – Hygiène + dents + habillage : on équipe l’armure du jour
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <input type="checkbox" data-task-id="matin-revision">
+                        8h00 – 15 min de “warm-up cerveau” (révisions légères)
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <input type="checkbox" data-task-id="matin-depart">
+                        8h40 – Départ pour le bus : lancement de la mission
+                    </label>
+                </li>
+
+            </ul>
+        </section>
+
+        <!-- 3 — SOIR -->
+        <section class="card card-soir">
+            <h2>🌙 Soir (tous les jours)</h2>
+            <p class="hint">
+                Le soir, on ferme le donjon, on range l’inventaire et on laisse le corps se recharger.
+            </p>
+            <ul class="task-list">
+                <li>
+                    <label>
+                        <input type="checkbox" data-task-id="soir-dents">
+                        Dents après le souper – on retire les debuffs “caries”
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <input type="checkbox" data-task-id="soir-douche">
+                        Douche / lavage complet – reset des malus de la journée
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <input type="checkbox" data-task-id="soir-rangement">
+                        15 min – Rangement rapide de la chambre (inventaire propre)
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <input type="checkbox" data-task-id="soir-coucher">
+                        20h30–20h45 – Coucher : on recharge PV + mana pour le lendemain
+                    </label>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 4 — APRÈS ECOLE (JOURS NORMAUX) -->
+        <section class="card apres-ecole apres-ecole-normal">
+            <h2>🏠 Après l’école (jours normaux)</h2>
+            <p class="hint">
+                On pose le sac, on souffle… puis on avance les quêtes importantes avant le farm.
+            </p>
+            <ul class="task-list">
+
+                <li>
+                    <label>
+                        <input type="checkbox" data-task-id="normal-pause">
+                        16h40 – Retour, pause & collation (petit buff d’énergie)
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <input type="checkbox" data-task-id="normal-devoirs">
+                        17h00 – 30 min de devoirs en solo (mode focus)
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <input type="checkbox" data-task-id="normal-revision-parent">
+                        17h30 – 15 min de révision avec un parent (mode coop)
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <input type="checkbox" data-task-id="normal-souper">
+                        18h30–19h00 – Souper en famille : moment du clan
+                    </label>
+                </li>
+
+            </ul>
+        </section>
+
+        <!-- 5 — APRÈS ECOLE (MARDI/JEUDI) -->
+        <section class="card apres-ecole apres-ecole-longue hidden">
+            <h2>🏠 Après l’école (Mar & Jeu – run longue)</h2>
+            <p class="hint">
+                Journée plus longue = on simplifie, mais on ne lâche pas les bases.
+            </p>
+            <ul class="task-list">
+
+                <li>
+                    <label>
+                        <input type="checkbox" data-task-id="longue-retour">
+                        18h15–18h30 – Retour + pause (on souffle)
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <input type="checkbox" data-task-id="longue-souper">
+                        18h45–19h15 – Souper en famille
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <input type="checkbox" data-task-id="longue-revision-soir">
+                        19h30 – 15 min de petite révision tranquille
+                    </label>
+                </li>
+
+            </ul>
+        </section>
+
+        <!-- 6 — WEEK-END -->
+        <section class="card card-weekend">
+            <h2>🧭 Week-end</h2>
+
+            <p class="hint">
+                Week-end = plus de liberté, mais un vrai héros garde une base de discipline : révisions, hygiène et repas en famille.
+            </p>
+
+            <ul class="task-list">
+
+                <li>
+                    <label>
+                        <input type="checkbox" data-task-id="we-reveil">
+                        Réveil flexible (8h00–10h00) – pas de rush, mais on ne reste pas en stase toute la journée
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <input type="checkbox" data-task-id="we-petitdej">
+                        Petit déjeuner à la maison – on commence avec le clan
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <input type="checkbox" data-task-id="we-hygiene">
+                        Hygiène du matin + dents – même hors saison, on reste propre
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <input type="checkbox" data-task-id="we-revisions">
+                        30–45 min de révisions dans la matinée – garder l’XP à jour
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <input type="checkbox" data-task-id="we-repas-midi">
+                        Repas du midi en famille – point de rassemblement du groupe
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <input type="checkbox" data-task-id="we-repas-soir">
+                        Repas du soir en famille – fin de journée avec le clan
+                    </label>
+                </li>
+
+            </ul>
+        </section>
+
+        <!-- 7 — GAMING -->
+        <section class="card card-gaming">
+            <h2>🎮 Temps gaming & écrans</h2>
+
+            <p class="hint">
+                Le gaming, c’est comme un butin légendaire : ça se mérite. Plus tu gères tes quêtes IRL, plus tu débloques de temps de jeu.
+            </p>
+
+            <ul class="task-list small">
+                <li>✔ Devoirs terminés</li>
+                <li>✔ Dents & hygiène faites sans spammer les parents</li>
+                <li>✔ 15 min de rangement</li>
+                <li>✔ Respect avec les parents & la sœur (le clan d’abord)</li>
+            </ul>
+
+            <p class="hint">
+                👉 Si tout est OK :<br>
+                – Soir Diablo avec papa (après que ta sœur soit couchée : run en duo)<br>
+                – 30 min de Switch dans la journée, quand c’est un bon moment
+            </p>
+        </section>
+
+        <!-- 8 — RÉCOMPENSES -->
+        <section class="card card-rewards">
+            <h2>⭐ Système de récompenses (style saison)</h2>
+
+            <p class="hint">
+                1 journée “combo parfait” = 1 point.<br>
+                Les points gagnés ne sont jamais retirés, comme un bonus de parangon permanent.
+            </p>
+
+            <div class="points-bar">
+                <div class="points-fill" id="points-fill"></div>
+            </div>
+
+            <p class="points-text">
+                Points actuels : <span id="points-value">0</span> / 10
+            </p>
+
+            <div class="points-buttons">
+                <button class="btn" id="btn-add-point">+1 point</button>
+                <button class="btn btn-secondary" id="btn-reset-points">Réinitialiser</button>
+            </div>
+
+            <ul class="rewards">
+                <li>🎁 Activité spéciale de ton choix</li>
+                <li>🎬 Film de ton choix</li>
+                <li>🍽️ Plat de ton choix</li>
+                <li>🍰 Dessert de ton choix</li>
+                <li>🕹️ Temps d’écran supplémentaire</li>
+            </ul>
+
+            <p class="hint">
+                Objectif : avancer un peu chaque jour. Pas besoin d’être parfait, juste constant.  
+                On est là comme soutien, pas comme boss de fin. 💚
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Sanctuaire version maison – pour un héros qui progresse IRL & in-game 💪</p>
+    </footer>
+
+    <script src="Malo.js"></script>
+</body>
+</html>
