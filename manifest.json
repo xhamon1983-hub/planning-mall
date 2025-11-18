@@ -1,0 +1,16 @@
+{
+  "name": "Player Malo",
+  "short_name": "Player Malo",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#020617",
+  "icons": [
+    {
+      "src": "/media/player.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}

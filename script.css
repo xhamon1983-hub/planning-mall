@@ -142,6 +142,32 @@ html, body {
     color: var(--text-muted);
 }
 
+.quote-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.quote-text {
+    margin: 4px 0 6px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.quote-source {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 12px;
+    font-style: italic;
+}
+
+.btn-quote {
+    padding: 6px 8px;
+    font-size: 12px;
+}
+
 /* LISTE DE TÂCHES */
 
 .task-list {
@@ -251,6 +277,11 @@ html, body {
 
     /* Les boutons de jours prennent toute la largeur en haut */
     .day-switch {
+        grid-column: 1 / -1;
+    }
+
+    /* Citation pleine largeur pour rester lisible */
+    .card-quote {
         grid-column: 1 / -1;
     }
 
